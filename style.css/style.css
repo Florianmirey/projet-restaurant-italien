@@ -7,7 +7,7 @@ html{
 header{
     position:relative;
     text-align: center;
-    background: url(/img/flag-2694986_1920.jpg);
+    background: url(./img/flag-2694986_1920.jpg);
     background-size: cover;
     width: 100vw;
     height: 100%;
