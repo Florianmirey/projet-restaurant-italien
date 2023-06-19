@@ -67,7 +67,7 @@ main{
     height: 100%;
     justify-content: space-around;
     align-items: center;
-    background:no-repeat url(/img/restaurant-5521372_1920.jpg);
+    background:no-repeat url(./img/restaurant-5521372_1920.jpg);
     background-size: cover;
     background-position: center;
    }
