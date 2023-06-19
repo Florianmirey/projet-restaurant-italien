@@ -5,12 +5,21 @@ html{
     font-family:'Raleway', sans-serif;
 }
 header{
+    position:relative;
     text-align: center;
     background: url(/img/flag-2694986_1920.jpg);
     background-size: cover;
-    width: 100%;
+    width: 100vw;
+    height: 100%;
     color: rgb(5, 2, 0);
-
+    justify-content: space-around;
+    
+}
+h1{
+    font-size: 50px;
+    margin:20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #ff0000 ;
 }
 body{
     width: 100%;
@@ -23,24 +32,28 @@ body{
     margin: 0;
 }
 nav{
+    position: absolute;
     display: flex;
     width: 100%;
     justify-content: space-around;
-    margin-bottom: 5px;
+    bottom: -40px;
+    z-index: 3;
 
     }
 nav button{
     background: none;
     border: solid;
     color:#fff;
-    border-color: black;
+    border-color: rgb(224, 6, 6);
     width: 20%;
     text-align: center;
     font-weight: bold;
     border-radius: 30px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.507);
 }    
 main{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     position: relative;
@@ -60,7 +73,6 @@ main{
    }
 article{
 width: 25%;
-height: 300px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -80,7 +92,7 @@ article:hover, nav button:hover{
 }
 .image_container{
     width: 100%;
-    height: 200px;
+    height: 300px;
     border: solid black;
     position: relative;
 }
@@ -88,6 +100,8 @@ img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    size: 100%;
+    object-position: center;
 }
 .more_information{
     width: 100%;
@@ -113,19 +127,18 @@ img{
 span{
     text-align: center;
     width: 100%;
-    height: 10%;
     color: rgb(35, 182, 47);
     background-color: black;
     border: solid black;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding-top: 10px;
    }
 button{
     width: 60%;
     height: 30px;
-    background-color:  rgb(235, 82, 82);
+    background-color:   rgb(224, 6, 6)                                          ;
     border-radius: 5px;
-    opacity: 0.8;
+    opacity: 0.65;
     border: none                        ;
     font-family:'Raleway', sans-serif;
 }
@@ -133,13 +146,40 @@ button:hover{
     opacity: 1;
     cursor: pointer;
 }
+button:focus {
+    transition: 800ms;
+    transform: scale(120%);
+}
+
 footer{
     background-color: rgb(51, 47, 47);
     text-align: center;
     width: 100%;
+    padding:20px;
     color: #fff;
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 768px) {
+    .dishes_container{
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+    .image_container{
+        height: 60%;
+    }
+    article{
+        width: 25%;
+        height: 25%;
+        display: flex;
+       
+    
+    }
+  button , footer,  .more_information{
+        font-size: 11px;
+    }
+     
+   }
+@media screen and (max-width: 480px) {
     .dishes_container{
         flex-direction: column;
         justify-content: space-evenly;
@@ -147,13 +187,22 @@ footer{
     }
     article{
         width: 35%;
-        height: 25%;
         display: flex;
+        margin-top:40px
     }
  button , footer,  .more_information{
-        font-size: 11px;
+        font-size: 8px;
+        
     }
-  
-     
+    footer{
+        padding: 5px;
+    }
+    span{
+        padding: 0%;
+    }
+    button{
+        height: 20px;
+    }
+ 
    }
     
